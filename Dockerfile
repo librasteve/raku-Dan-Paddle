@@ -18,8 +18,10 @@ RUN cp ~/.plenv/base/plenv-latest_version /usr/share/plenv/libexec/
 
 RUN echo 'export PATH="$HOME/.plenv/bin:$PATH"' >> ~/.profile
 RUN echo 'eval "$(plenv init -)"' >> ~/.profile 
-RUN plenv install-cpanm
 
-ONBUILD RUN plenv rehash
+RUN plenv install -Duseshrplib 5.28.0
+RUN plenv global 5.28.0
+RUN plenv rehash
+RUN plenv install-cpanm
 
 CMD ["/bin/bash", "-l"]
