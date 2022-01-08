@@ -1,2 +1,2 @@
-# raku-PDL
+# raku Dan::Paddle
 raku binding for Perl Data Language
