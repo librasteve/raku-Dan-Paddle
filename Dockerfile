@@ -8,9 +8,9 @@ RUN apt-get update
 RUN apt-get install -y build-essential
 RUN apt-get install -y git curl
 
-RUN git clone git://github.com/jmmills/docker-plenv-base.git ~/.plenv/base
-RUN git clone git://github.com/tokuhirom/plenv.git /usr/share/plenv
-RUN git clone git://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build
+RUN git clone https://github.com/jmmills/docker-plenv-base.git ~/.plenv/base
+RUN git clone https://github.com/tokuhirom/plenv.git /usr/share/plenv
+RUN git clone https://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build
 ENV PATH = $PATH:/usr/share/plenv/bin
 
 RUN cp ~/.plenv/base/plenv_profile.sh /etc/profile.d/plenv.sh
