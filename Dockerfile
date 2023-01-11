@@ -1,4 +1,4 @@
-FROM p6steve/rakudo:ubuntu-arm64-2021.05
+FROM p6steve/rakudo:basic
       
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
